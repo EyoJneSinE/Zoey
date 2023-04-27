@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/openingFragment">
+
+    <fragment
+        android:id="@+id/openingFragment"
+        android:name="com.eniskaner.zoeyimprovekids.view.openingfragmet.OpeningFragment"
+        android:label="fragment_opening"
+        tools:layout="@layout/fragment_opening" >
+        <action
+            android:id="@+id/action_openingFragment_to_firstQuestionFragment"
+            app:destination="@id/firstQuestionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/firstQuestionFragment"
+        android:name="com.eniskaner.zoeyimprovekids.view.firstquestionfragment.FirstQuestionFragment"
+        android:label="fragment_first_question"
+        tools:layout="@layout/fragment_first_question" >
+        <action
+            android:id="@+id/action_firstQuestionFragment_to_secondQuestionFragment"
+            app:destination="@id/secondQuestionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondQuestionFragment"
+        android:name="com.eniskaner.zoeyimprovekids.view.secondquestionfragment.SecondQuestionFragment"
+        android:label="fragment_second_question"
+        tools:layout="@layout/fragment_second_question" >
+        <action
+            android:id="@+id/action_secondQuestionFragment_to_generateFragment"
+            app:destination="@id/generateFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/generateFragment"
+        android:name="com.eniskaner.zoeyimprovekids.view.generatefragment.GenerateFragment"
+        android:label="fragment_generate"
+        tools:layout="@layout/fragment_generate" >
+        <action
+            android:id="@+id/action_generateFragment_to_answerFragment"
+            app:destination="@id/answerFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/answerFragment"
+        android:name="com.eniskaner.zoeyimprovekids.view.answerfragment.AnswerFragment"
+        android:label="fragment_answer"
+        tools:layout="@layout/fragment_answer" >
+    </fragment>
+</navigation>
